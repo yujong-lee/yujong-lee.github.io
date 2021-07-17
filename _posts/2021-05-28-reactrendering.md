@@ -51,7 +51,7 @@ React Component는 다음 네 가지 상황에서 re-render 된다. (forceUpdate
 
 보통 1, 2, 3은 하나씩 발생되는 것이 아니라 연쇄적으로 발생된다. 예를 들어 부모의 State가 변경되어 부모 컴포넌트가 re-render되고, 이에 따라 자식 컴포넌트가 re-render되는 식이다. 아래 예시가 딱 그렇다. 버튼을 클릭할 때마다 State가 변하고, App이 re-render되며, 이에 따라 VerySlow도 re-render된다. 따라서 버튼을 클릭할 때마다 200ms의 딜레이가 발생하게 된다.
 
-~~~javascript
+~~~jsx
 export default function App() {
   const [count, setCount] = useState(20);
 
@@ -80,7 +80,7 @@ const VerySlow = () => {
 
 React.memo()를 이용하면 쉽게 해결할 수 있다. React.memo()는 Hook이 등장하기 전에 많이 쓰이던 Higher-Order Components인데, 이를 통해 반환된 컴포넌트는 같은 props에 대해서 같은 결과를 바로 반환한다. VerySlow는 props를 받지 않으므로 언제나 <p>Slow</p>를 곧바로 리턴하게된다. (memo와 useMemo의 차이는 [이 글](https://sustainable-dev.tistory.com/137)을 참고하면 좋다.)
 
-~~~javascript
+~~~jsx
 const VerySlow = memo(() => {
   const now = performance.now();
   while (performance.now() - now < 200) {
@@ -92,7 +92,7 @@ const VerySlow = memo(() => {
 
 하지만 이것이 올바른 해법일까? 어찌보면 이것은 너무 성급한 최적화라는 생각이 든다. 지금 App 컴포넌트는 너무 못생겼다. Count를 사용하는 부분을 따로 분리해주면 훨씬 좋을 것 같다.
 
-~~~javascript
+~~~jsx
 // App.js
 export default function App() {
   return (
@@ -139,7 +139,7 @@ const fontStyle = { fontSize: ${count}px };
 
 먼저 다음과 같이 CounterWrapper을 만든다.
 
-~~~javascript
+~~~jsx
 // CounterWrapper.js
 export default function CounterWrapper({ children }) {
   const [count, setCount] = useState(20);
@@ -161,7 +161,7 @@ export default function CounterWrapper({ children }) {
 
 그리고 App에서 CounterWrapper의 children으로 VerySlow를 사용한다.
 
-~~~javascript
+~~~jsx
 // App.js
 export default function App() {
   return (
