@@ -2,23 +2,59 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: About
+  - title: _
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
-      - title: Github
-        url: https://github.com/yujong-lee
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: 소개
+        url: about
 
-  - title: Recent Posts
+      - title: 깃허브
+        url: https://github.com/yujong-lee
+
+      # - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+
+  - title: 아카이브
     post_list:
       limit: 5
       show_more: true
-      show_more_text: See archive...
+      show_more_text: 더보기
       show_more_url: archive.html
 
-  - title: Retrospective
+  - title: 회고
     post_list:
-      category: example2
+      limit: 5
+      category: retrospective
       show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
+      show_more_text: 더보기
+      show_more_url: retrospective.html
+
+  - title: 생각
+    post_list:
+      limit: 5
+      category: thought
+      show_more: true
+      show_more_text: 더보기
+      show_more_url: thought.html
+
+  - title: 개발
+    post_list:
+      limit: 5
+      category: dev
+      show_more: true
+      show_more_text: 더보기
+      show_more_url: dev.html
+
+  - title: 번역
+    post_list:
+      limit: 5
+      category: translation
+      show_more: true
+      show_more_text: 더보기
+      show_more_url: translation.html
+
+  - title: 책
+    post_list:
+      limit: 5
+      category: book
+      show_more: true
+      show_more_text: 더보기
+      show_more_url: book.html
