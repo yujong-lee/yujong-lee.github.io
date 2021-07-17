@@ -22,7 +22,7 @@ category: dev
 뭔가 복잡한 로직을 거쳐서 얻은 tasks 배열을 버튼과 함께 렌더하는 List컴포넌트는 Presentational/Container페턴을 이용하여 아래와 같이 구현될 수 있다.
 
 ~~~javascript
-// ListContainer.javascript
+// ListContainer.jsx
 import { useSelector, useDispatch } from 'react-redux';
 
 import List from '../presentational/List';
@@ -47,7 +47,7 @@ export default function ListContainer() {
   );
 }
 
-// List.javascript
+// List.jsx
 export default function List({ items, onClick }) {
   return (
     <ol>
@@ -72,7 +72,7 @@ export default function List({ items, onClick }) {
 이번에는 같은 일을 하는 컴포넌트를 2개로 분리하지 않고 훅을 이용해 작성해보겠다.
 
 ~~~javascript
-// useTasks.javascript
+// useTasks.jsx
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function useTasks() {
@@ -90,7 +90,7 @@ export default function useTasks() {
   return { tasks, deleteTask };
 }
 
-// List.javascript
+// List.jsx
 import useTasks from './useTasks';
 
 export default function List() {
@@ -125,7 +125,7 @@ ListContainer가 사용하는 **List컴포넌트는 어디든지 사용될 수 �
 중요한 것은 우리가 장점만을 취할 수 있다는 점이다. 아래의 예시는 Container 컴포넌트에 React Custom Hook를 도입한 것이다.
 
 ~~~javascript
-// useTasks.javascript
+// useTasks.jsx
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function useTasks() {
@@ -133,7 +133,7 @@ export default function useTasks() {
   return { tasks, deleteTask };
 }
 
-// ListContainer.javascript
+// ListContainer.jsx
 import List from '../presentational/List';
 import useTasks from './useTasks';
 
@@ -148,7 +148,7 @@ export default function ListContainer() {
   );
 }
 
-// List.javascript
+// List.jsx
 export default function List({ items, onClick }) {
   return (
     <ol>
