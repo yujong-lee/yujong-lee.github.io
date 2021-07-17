@@ -1,5 +1,5 @@
 ---
-title: "React Hook은 Presentational/Container Component를 대체할 수 있을까?"
+title: "React Hook VS Container Component"
 category: dev
 ---
 
