@@ -15,8 +15,8 @@ yujonglee [at] g.skku.edu
 ## 최근
 
 - 9월부터 1학년 2학기로 복학 예정입니다.
-- `리펙터링`, `객체지향 디자인`, `정적 타입`  등에 관심을 두고 공부 중입니다.
-- 블록체인, 그중에서도 `Terra`에 관심을 두고 공부 중이며 `TerraJS`, `AnchorSDK` 등을 이용한 프로젝트를 준비 중입니다.
+- 리펙터링, 객체지향 디자인, 정적 타입  등에 관심을 두고 공부 중입니다.
+- 블록체인, 그중에서도 Terra에 관심을 두고 공부 중이며 TerraJS, AnchorSDK 등을 이용한 프로젝트를 준비 중입니다.
 
 ## 외부 링크
 
@@ -30,29 +30,29 @@ yujonglee [at] g.skku.edu
 
 - 테스트 주도 개발을 실천합니다. 거의 항상 테스트 코드를 먼저 작성합니다.
 
-- 단위 테스트(`jest`)와 E2E 테스트(`Codecept`)를 포함한 `React` 프로젝트를 여러번 경험했습니다.
+- 단위 테스트(jest)와 E2E 테스트(Codecept)를 포함한 React 프로젝트를 여러번 경험했습니다.
 
-- `React`, `Redux`, 그리고 `Recoil`에 익숙합니다.
+- React, Redux, 그리고 Recoil에 익숙합니다.
 
-- `Javascript`와 `Typescript`를 주로 사용하여 개발하고 있으며, 이전에는 `Perl`과 `C/C++`을 사용했습니다.
+- Javascript와 Typescript를 주로 사용하여 개발하고 있으며, 이전에는 Perl과 C/C++을 사용했습니다.
 
-- `Processing`, `Ruby`, `Python`, `Java`, `io`, `Rust`, 그리고 `Racket`에 약간의 경험이 있습니다.
+- Processing, Ruby, Python, Java, io, Rust, 그리고 Racket에 약간의 경험이 있습니다.
 
 ## 프로젝트
 
 - [Tresk](https://github.com/yujong-lee/Tresk)
   
-[Extreme Programming Explained][EPE]의 자기 유사성에 영감을 받아 테스트 주도 개발 과정에서, 또는 일상에서 작은 단위의 할 일 목록을 관리하는데 활용할 수 있는 앱을 `React`와 `Typescript`를 이용하여 개발하고 있습니다.
+[Extreme Programming Explained][EPE]의 자기 유사성에 영감을 받아 테스트 주도 개발 과정에서, 또는 일상에서 작은 단위의 할 일 목록을 관리하는데 활용할 수 있는 앱을 React와 Typescript를 이용하여 개발하고 있습니다.
 
 - [Stolage](https://github.com/yujong-lee/stolage-back)
 
-태그 기반 파일 관리 시스템입니다. 자유로운 `Union - intersection` 필터링을 수행할 수 있습니다. `React`, `Recoil`, `MongoDB`, `NestJs` 로 구현했습니다. 지인과 함께 구현하였고, 기획은 본인이, 프런트/백앤드 개발은 함께 진행했습니다.
+태그 기반 파일 관리 시스템입니다. 자유로운 Union - intersection 필터링을 수행할 수 있습니다. React, Recoil, MongoDB, NestJs 로 구현했습니다. 지인과 함께 구현하였고, 기획은 본인이, 프런트/백앤드 개발은 함께 진행했습니다.
 
-현재 데모까지 완성하고 마무리하지 못했으며 본인이 직접 `Typescript`로 다시 작성하여 완성할 계획을 가지고 있습니다.
+현재 데모까지 완성하고 마무리하지 못했으며 본인이 직접 Typescript로 다시 작성하여 완성할 계획을 가지고 있습니다.
 
 - [Seoul Ultrafinedust Visualization](https://github.com/yujong-lee/seoul_ultrafinedust_visualization)  
   
-서울시에서 공개한 IoT도시데이터 자료를 `Perl`로 파싱한 뒤, `Processing`으로 시각화한 것입니다.
+서울시에서 공개한 IoT도시데이터 자료를 Perl로 파싱한 뒤, Processing으로 시각화한 것입니다.
 
 ## 사람
 
