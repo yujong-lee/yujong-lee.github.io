@@ -3,6 +3,8 @@ title: "Redux 리듀서 Clojure로 작성해보기"
 category: dev
 ---
 
+현재 Clojure에 대한 코드 블럭이 이상함. 나중에 수정 예정.
+
 ## Javscript
 
 ~~~js
@@ -39,7 +41,7 @@ addTask: (state, action) => {
 
 ## Clojure(script)
 
-~~~clj
+```clj
 (def oldState
   (atom
    {:selectedTaskId :0
@@ -65,11 +67,11 @@ addTask: (state, action) => {
       (swap! oldState update-in [:nextTaskId] #(updateId inc %))
       (swap! oldState update-in [:remainingTasks selectedTaskId :subTasks] #(conj % nextTaskId))
       (swap! oldState update-in [:remainingTasks] #(assoc % nextTaskId {:title newTaskTitle :subTasks [] :isOpen true})))))
-~~~
+```
 
 매크로를 이용하면 swap! 부분을 아래와 같이 간단하게 바꿀 수 있다. 이것은 함수를 정의한 것과 다르다. 새로운 문법을 만들어낸 것이다.
 
-~~~clj
+```clj
 (defmacro updateState
   [state & args]
   (for [reducer (partition 2 args)]
@@ -81,4 +83,4 @@ addTask: (state, action) => {
     [:nextTaskId] #(updateId inc %)
     [:remainingTasks] #(assoc % nextTaskId {:title newTaskTitle :subTasks [] :isOpen true})
     [:remainingTasks selectedTaskId :subTasks] #(conj % nextTaskId)))
-~~~
+```
