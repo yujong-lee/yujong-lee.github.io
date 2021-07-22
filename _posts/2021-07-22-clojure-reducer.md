@@ -74,8 +74,8 @@ addTask: (state, action) => {
 ```clj
 (defmacro updateState
   [state & args]
-  (for [reducer (partition 2 args)]
-    `(swap! ~state update-in ~@reducer)))
+  `(do ~(for [reducer (partition 2 args)]
+    `(swap! ~state update-in ~@reducer))))
 
 (when-not (= newTaskTitle "")
     (updateState
