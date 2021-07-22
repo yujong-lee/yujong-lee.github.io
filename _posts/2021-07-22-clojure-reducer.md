@@ -39,7 +39,7 @@ addTask: (state, action) => {
 
 ## Clojure(script)
 
-~~~clojure
+~~~clj
 (def oldState
   (atom
    {:selectedTaskId :0
@@ -69,7 +69,7 @@ addTask: (state, action) => {
 
 매크로를 이용하면 swap! 부분을 아래와 같이 간단하게 바꿀 수 있다. 이것은 함수를 정의한 것과 다르다. 새로운 문법을 만들어낸 것이다.
 
-~~~clojure
+~~~clj
 (defmacro updateState
   [state & args]
   (for [reducer (partition 2 args)]
