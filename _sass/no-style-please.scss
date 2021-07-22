@@ -73,8 +73,9 @@ code {
 }
 
 div.highlighter-rouge code {
+  font-size: 12px;
   display: block;
-  overflow-x: auto;
+  overflow-x: scroll;
   white-space: pre-wrap;
   padding: 1rem;
 }
